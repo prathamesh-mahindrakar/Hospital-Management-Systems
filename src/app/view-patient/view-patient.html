@@ -1,0 +1,75 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+
+    <a style="color: white;" class="navbar-brand" href="#">SIDDHINATH HOSPITALS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+        <div class="mx-2">
+            <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
+                    style="color:white;" href="javascript:void(0);" routerLink="/home">Logout</a></button>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-gradient bg-primary text-white rounded-top-4">
+            <h3 class="mb-0">
+                <i class="bi bi-person-badge me-2"></i> Patient Details
+            </h3>
+        </div>
+        <div class="card-body px-5 py-4">
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-semibold text-secondary">🆔 ID:</div>
+                <div class="col-md-8">{{ patient.id }}</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-semibold text-secondary">👤 Name:</div>
+                <div class="col-md-8">{{ patient.name }}</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-semibold text-secondary">🎂 Age:</div>
+                <div class="col-md-8">{{ patient.age }}</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-semibold text-secondary">🩸 Blood Group:</div>
+                <div class="col-md-8">{{ patient.blood }}</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-semibold text-secondary">📜 Prescription:</div>
+                <div class="col-md-8">{{ patient.prescription }}</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-semibold text-secondary">💊 Dose:</div>
+                <div class="col-md-8">{{ patient.dose }}</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-semibold text-secondary">💰 Fees:</div>
+                <div class="col-md-8">{{ patient.fees }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 fw-semibold text-secondary">⚠️ Urgency:</div>
+                <div class="col-md-8">{{ patient.urgency }}</div>
+            </div>
+        </div>
+
+        <div class="card-footer bg-light text-end rounded-bottom-4">
+
+            <button routerLink="/docdash" class="btn btn-secondary">
+                <i class="bi bi-arrow-left me-1"></i> Back
+            </button>
+        </div>
+    </div>
+</div>
