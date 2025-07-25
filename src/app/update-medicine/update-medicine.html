@@ -1,43 +1,43 @@
 <nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
-
-    <a style="color: white;" class="navbar-brand" href="#">SIDDHINATH HOSPITALS</a>
+    <a style="color: white; font-weight: bold;" class="navbar-brand" href="#">AarogyaCare Hospital</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
             <li class="nav-item">
                 <a style="color: white;" class="nav-link active" routerLink="/docdash">Doctor Dashboard</a>
             </li>
-
         </ul>
 
         <div class="mx-2">
-            <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
-                    style="color:white;" href="javascript:void(0);" routerLink="/home">Logout</a></button>
+            <button style="margin: 5px;" class="btn btn-danger">
+                <a style="color:white; text-decoration: none;" href="javascript:void(0);" routerLink="/home">Logout</a>
+            </button>
         </div>
     </div>
 </nav>
 
-<div class="container">
-    <h2 class="text-center">Update Medicine</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Update Medicine Details</h2>
 
-    <form (ngSubmit)="onSubmit()" class="mt-4">
-        <div class="form-group">
-            <label>Drug Name</label>
+    <form (ngSubmit)="onSubmit()" class="p-4 shadow-sm border rounded bg-light">
+        <div class="form-group mb-3">
+            <label for="name" class="form-label">Drug Name</label>
             <input type="text" id="name" name="name" placeholder="Enter Drug Name" class="form-control"
                 [(ngModel)]="medicine.drugName" required />
         </div>
 
-        <div class="form-group">
-            <label>Stock</label>
+        <div class="form-group mb-4">
+            <label for="stock" class="form-label">Stock</label>
             <input type="number" id="stock" name="stock" placeholder="Enter Stock" class="form-control"
                 [(ngModel)]="medicine.stock" required />
         </div>
 
-        <br><br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4">Update</button>
+        </div>
     </form>
 </div>

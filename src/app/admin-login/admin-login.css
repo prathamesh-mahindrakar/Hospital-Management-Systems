@@ -1,49 +1,13 @@
-/* Background styling */
 .login-container {
-    height: 100vh;
-    background: linear-gradient(to right, #e3f2fd, #f8f9fa);
-    padding: 20px;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
 }
 
-/* Card styling */
-.login-card {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 16px;
-    width: 100%;
-    max-width: 420px;
+.login-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Form controls spacing */
-.form-label {
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
-
-input.form-control {
-    padding: 10px;
-    font-size: 0.95rem;
-}
-
-/* Button styles */
-.btn {
-    font-weight: 500;
-    padding: 10px;
-}
-
-/* Navbar brand */
-.navbar-brand {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-/* Responsive fix */
-@media (max-width: 576px) {
-    .login-card {
-        padding: 30px 20px;
-    }
-
-    .navbar-brand {
-        font-size: 1.3rem;
-    }
+input.form-control:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
 }

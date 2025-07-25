@@ -1,0 +1,15 @@
+.container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    font-style: italic;
+    color: #888;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}

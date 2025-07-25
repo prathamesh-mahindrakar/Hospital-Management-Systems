@@ -1,0 +1,15 @@
+marquee {
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #0d6efd;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+hr {
+    border: 1px solid #dee2e6;
+}

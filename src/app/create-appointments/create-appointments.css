@@ -1,0 +1,52 @@
+.custom-navbar {
+    background-color: #343a40;
+    color: white;
+    margin: auto;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.logout-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.logout-btn a:hover {
+    color: #ffcccc;
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.appointment-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+}

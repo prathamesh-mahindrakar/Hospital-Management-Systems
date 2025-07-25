@@ -1,76 +1,80 @@
-<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+<!-- Add Bootstrap CSS in your index.html -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <a style="color: white;" class="navbar-brand" href="#">SIDDHINATH HOSPITALS</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">AarogyaCare Hospital</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <li class="nav-item">
-                <a style="color: white;" class="nav-link active" routerLink="/docdash">Doctor Dashboard</a>
-            </li>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/docdash">Doctor Dashboard</a>
+                </li>
+            </ul>
 
-        </ul>
-
-        <div class="mx-2">
-            <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
-                    style="color:white;" href="javascript:void(0);" routerLink="/home">Logout</a></button>
+            <div class="d-flex">
+                <a routerLink="/home" class="btn btn-outline-light">Logout</a>
+            </div>
         </div>
     </div>
 </nav>
 
-<div class="container">
-    <h2 class="text-center">Add New Patient</h2>
+<div class="container mt-5 shadow-lg p-4 rounded bg-light" style="max-width: 600px;">
+    <h2 class="text-center mb-4 text-primary">Add New Patient</h2>
 
-    <form (ngSubmit)="onSubmit()" #patientForm="ngForm" class="mt-4">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter Your Name" class="form-control"
+    <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
+        <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter Patient's Name"
                 [(ngModel)]="patient.name" required />
         </div>
 
-        <div class="form-group">
-            <label for="age">Age</label>
-            <input type="text" id="age" name="age" placeholder="Enter Your Age" class="form-control"
+        <div class="mb-3">
+            <label for="age" class="form-label fw-bold">Age</label>
+            <input type="number" id="age" name="age" class="form-control" placeholder="Enter Age"
                 [(ngModel)]="patient.age" required />
         </div>
 
-        <div class="form-group">
-            <label for="blood">Blood Group</label>
-            <input type="text" id="blood" name="blood" placeholder="Enter Blood Group" class="form-control"
+        <div class="mb-3">
+            <label for="blood" class="form-label fw-bold">Blood Group</label>
+            <input type="text" id="blood" name="blood" class="form-control" placeholder="e.g., A+, B-"
                 [(ngModel)]="patient.blood" />
         </div>
 
-        <div class="form-group">
-            <label for="prescription">Prescription</label>
-            <input type="text" id="prescription" name="prescription" placeholder="Enter Prescription"
-                class="form-control" [(ngModel)]="patient.prescription" />
+        <div class="mb-3">
+            <label for="prescription" class="form-label fw-bold">Prescription</label>
+            <input type="text" id="prescription" name="prescription" class="form-control"
+                placeholder="Enter Prescription" [(ngModel)]="patient.prescription" />
         </div>
 
-        <div class="form-group">
-            <label for="dose">Dose</label>
-            <input type="text" id="dose" name="dose" placeholder="Enter Dose" class="form-control"
+        <div class="mb-3">
+            <label for="dose" class="form-label fw-bold">Dose</label>
+            <input type="text" id="dose" name="dose" class="form-control" placeholder="Enter Dose"
                 [(ngModel)]="patient.dose" />
         </div>
 
-        <div class="form-group">
-            <label for="fees">Fees</label>
-            <input type="text" id="fees" name="fees" placeholder="Enter Fees" class="form-control"
+        <div class="mb-3">
+            <label for="fees" class="form-label fw-bold">Fees</label>
+            <input type="number" id="fees" name="fees" class="form-control" placeholder="Enter Fees"
                 [(ngModel)]="patient.fees" />
         </div>
 
-        <div class="form-group">
-            <label for="urgency">Urgency</label>
-            <input type="text" id="urgency" name="urgency" placeholder="Enter Urgency Level" class="form-control"
-                [(ngModel)]="patient.urgency" />
+        <div class="mb-3">
+            <label for="urgency" class="form-label fw-bold">Urgency</label>
+            <select id="urgency" name="urgency" class="form-select" [(ngModel)]="patient.urgency">
+                <option selected disabled>Select urgency level</option>
+                <option value="Low">Low</option>
+                <option value="Moderate">Moderate</option>
+                <option value="High">High</option>
+            </select>
         </div>
 
-        <div class="text-center mt-3">
-            <button type="submit" class="btn btn-primary">
-                Submit
-            </button>
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary px-4">Submit</button>
         </div>
     </form>
 </div>

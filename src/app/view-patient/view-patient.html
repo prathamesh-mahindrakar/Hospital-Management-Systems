@@ -1,16 +1,21 @@
-<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
-
-    <a style="color: white;" class="navbar-brand" href="#">SIDDHINATH HOSPITALS</a>
+<nav style="margin: auto;" class="navbar navbar-expand-lg bg-dark">
+    <a style="color: white; font-weight: bold; font-size: 1.5rem;" class="navbar-brand" href="#">
+        AarogyaCare Hospital
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Add additional nav links here if needed -->
         </ul>
-        <div class="mx-2">
-            <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
-                    style="color:white;" href="javascript:void(0);" routerLink="/home">Logout</a></button>
+
+        <div class="d-flex">
+            <a routerLink="/home" class="btn btn-danger text-white">
+                <i class="bi bi-box-arrow-right me-1"></i> Logout
+            </a>
         </div>
     </div>
 </nav>
@@ -22,8 +27,8 @@
                 <i class="bi bi-person-badge me-2"></i> Patient Details
             </h3>
         </div>
-        <div class="card-body px-5 py-4">
 
+        <div class="card-body px-4 py-4">
             <div class="row mb-3">
                 <div class="col-md-4 fw-semibold text-secondary">🆔 ID:</div>
                 <div class="col-md-8">{{ patient.id }}</div>
@@ -59,15 +64,14 @@
                 <div class="col-md-8">{{ patient.fees }}</div>
             </div>
 
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-md-4 fw-semibold text-secondary">⚠️ Urgency:</div>
                 <div class="col-md-8">{{ patient.urgency }}</div>
             </div>
         </div>
 
         <div class="card-footer bg-light text-end rounded-bottom-4">
-
-            <button routerLink="/docdash" class="btn btn-secondary">
+            <button routerLink="/docdash" class="btn btn-outline-secondary">
                 <i class="bi bi-arrow-left me-1"></i> Back
             </button>
         </div>
